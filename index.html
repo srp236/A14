@@ -2,9 +2,9 @@
 <html>
 <head>
 <script>
-function setCookie(cname,cvalue,exminutes) {
+function setCookie(cname,cvalue,exdays) {
   var d = new Date();
-  d.setTime(d.getTime() + (exminutes*30*1000));
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
   var expires = "expires=" + d.toGMTString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
@@ -42,7 +42,6 @@ function checkCookie() {
 <body onload="checkCookie()"></body>
 <h1>A14 Cookies<h1><br>
 <h1>Part 2 of 2<h1>
-<p>Cookies are set to expire in 30 secs<p>
 <button onclick="alert(document.cookie);">Display</button> 
 
 </html>
