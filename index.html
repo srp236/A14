@@ -36,6 +36,9 @@ function checkCookie() {
      }
   }
 }
+ function delete_cookie(name) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
 </script>
 </head>
 
@@ -43,6 +46,6 @@ function checkCookie() {
 <h1>A14 Cookies<h1><br>
 <h1>Part 2<h1>
 <button onclick="alert(document.cookie);">Display</button> 
-<button type="button" onclick='document.cookie="username=;expires=Thu; 01 Jan 1970&quot;"'>Delete Cookie</button>
+<button type="button" onclick="delete_cookie("username");">Delete Cookie</button>
 
 </html>
