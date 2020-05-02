@@ -32,7 +32,7 @@ function checkCookie() {
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
-       setCookie("username", user, 1);
+       setCookie("username", user, .5);
      }
   }
 }
@@ -40,8 +40,9 @@ function checkCookie() {
 </head>
 
 <body onload="checkCookie()"></body>
-<h1>A14 Cookies<h1><br><br>
+<h1>A14 Cookies<h1><br>
 <h2>part 2<h2>
+<p>Cookies are set to expire in 30 secs<p>
 <button onclick="alert(document.cookie);">Display</button> 
 
 </html>
