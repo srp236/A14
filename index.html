@@ -28,7 +28,7 @@ function getCookie(cname) {
 function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
-    alert("Welcome again " + user);
+    alert("Welcome Back " + user);
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
@@ -40,8 +40,8 @@ function checkCookie() {
 </head>
 
 <body onload="checkCookie()"></body>
- <h1>A14 Cookies<h1><br><br>
- <h2>part 2<h2>
+<h1>A14 Cookies<h1><br><br>
+<h2>part 2<h2>
 <button onclick="alert(document.cookie);">Display</button> 
 
 </html>
