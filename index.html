@@ -2,9 +2,9 @@
 <html>
 <head>
 <script>
-function setCookie(cname,cvalue,exdays) {
+function setCookie(cname,cvalue,exminutes) {
   var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  d.setTime(d.getTime() + (exminutes*24*60*60*1000));
   var expires = "expires=" + d.toGMTString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
@@ -32,7 +32,7 @@ function checkCookie() {
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
-       setCookie("username", user, 30);
+       setCookie("username", user, 1);
      }
   }
 }
